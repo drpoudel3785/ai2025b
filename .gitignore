@@ -1,0 +1,6 @@
+links.txt
+template.html
+*.log
+temp/
+pycharm/
+vscode/venv/
