@@ -12,8 +12,15 @@
 <a href="{{url_for('index')}}">Home</a> | 
 <a href="{{url_for('about')}}">About</a> |
 <a href="{{url_for('contact')}}">Contact</a>  |
-<a href="{{url_for('login')}}">Login</a>   |
-<a href="{{url_for('register')}}">Register</a>   
+{% if session.username %}
+    <!-- User is logged in -->
+  
+    Welcome, {{ session.username }} | <a href="{{ url_for('logout') }}">Logout</a> 
+    {% else %}
+    <!-- User is not logged in -->
+    <a href="{{ url_for('login') }}">Login</a> |
+    <a href="{{ url_for('register') }}">Register</a>
+    {% endif %}  
 <hr>
 {% block body %}
 {% endblock %}

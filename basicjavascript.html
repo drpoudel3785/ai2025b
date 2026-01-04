@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JavaScript</title>
+    <!-- INternal javascript-->
+    <script>
+        let name="The Britsh College"
+        let address="Thapathali"
+        console.log(name + " " + address)
+        //javascript object
+        let user = {
+        name: "Ram",
+        age: 22,
+        greet() {
+            console.log("Hello");
+        }
+        };
+        console.log(user.name)
+        console.log(user.age)
+        user.greet()
+
+    </script>
+    <!-- adding external js file-->
+    <script src="js/custom.js"></script>
+</head>
+<body >
+    <div id="greeting"></div>
+    <!-- inline Javascript-->
+    <button onclick="alert('hi')">Hi</button>
+    <button onclick="sayHello()">Say Hello</button>
+    <button onmouseover="greeting()">UserName</button>
+</body>
+</html>
